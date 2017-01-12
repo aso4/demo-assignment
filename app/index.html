@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <title>Demo Assignment</title>
  <link rel="stylesheet" href="css/styles.css">
@@ -31,8 +31,8 @@
       </form><span class="sr-only">(current)</span></li>
      <li class="dropdown">
       <a href="#" class="dropdown-toggle thumbnail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <!-- profile dropdown -->
-          <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait" alt="Image" />
+       <!-- profile dropdown -->
+       <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait" alt="Image" />
       </a>
       <ul class="dropdown-menu">
        <li><a href="#">Action</a></li>
@@ -44,7 +44,9 @@
        <li><a href="#">One more separated link</a></li>
       </ul>
      </li>
-     <li><a class="glyphicon glyphicon-log-out" href="#"></a></li>
+     <li>
+      <a class="glyphicon glyphicon-log-out" href="#"></a>
+     </li>
     </ul>
    </div>
    <!--/.nav-collapse -->
@@ -68,7 +70,7 @@
 
      <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-horizontal"></span></a>
        <ul class="dropdown-menu">
         <li><a href="#">Action</a></li>
         <li><a href="#">Another action</a></li>
@@ -92,166 +94,193 @@
 
      <div class="row">
       <div class="col-md-12">
-        <div class="neat-spacing">
-       <div class="row">
-        <div class="col-md-1">
-         <div class="circle">
-          <i class="glyphicon glyphicon-user glyphicon-inverse"></i>
+       <div class="neat-spacing">
+        <div class="row">
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-user glyphicon-inverse"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info">ASSIGNED TO:<br>John Smith</span>
+         </div>
+
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-calendar glyphicon-inverse icon"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info">DUE DATE:<br> Sep 15, 2016</span>
+         </div>
+
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-exclamation-sign glyphicon-inverse"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info">RISK FACTOR:<br> High Risk</span>
+         </div>
+
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-usd glyphicon-inverse"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info">VALUE:<br> $5000</span>
+         </div>
+
+
+        </div>
+        <div class="row">
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-home glyphicon-inverse"></i>
+          </div>
+         </div>
+
+         <div class="col-md-7">
+          ENTITY:<br /> Holland and Sherry Store - Savile Row branch (Number 1345)
          </div>
         </div>
-        <div class="col-md-2">
-         <span class="info">ASSIGNED TO:<br>John Smith</span>
-        </div>
-
-        <div class="col-md-1">
-         <div class="circle">
-          <i class="glyphicon glyphicon-calendar glyphicon-inverse icon"></i>
-         </div>
-        </div>
-        <div class="col-md-2">
-         <span class="info">DUE DATE:<br> Sep 15, 2016</span>
-        </div>
-
-       <div class="col-md-1">
-        <div class="circle">
-         <i class="glyphicon glyphicon-exclamation-sign glyphicon-inverse"></i>
-        </div>
-       </div>
-       <div class="col-md-2">
-        <span class="info">RISK FACTOR:<br> High Risk</span>
+        <!-- container -->
        </div>
 
-      <div class="col-md-1">
-       <div class="circle">
-        <i class="glyphicon glyphicon-usd glyphicon-inverse"></i>
-       </div>
-      </div>
-      <div class="col-md-2">
-       <span class="info">VALUE:<br> $5000</span>
-      </div>
-
-
-      </div>
-      <div class="row">
-       <div class="col-md-1">
-        <div class="circle">
-         <i class="glyphicon glyphicon-home glyphicon-inverse"></i>
-        </div>
-       </div>
-
-       <div class="col-md-7">
-       ENTITY:<br /> Holland and Sherry Store - Savile Row branch (Number 1345)
-     </div>
-      </div>
-      <!-- container -->
-    </div>
-
-      <div class="panel panel-default">
-       <div class="panel-body black-bg">
+       <div class="panel panel-default">
+        <div class="panel-body black-bg">
          <div class="col-md-9">
-           Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity
+          Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity
          </div>
          <div class="col-md-1 navbar-right">
-           Icon 1<br />Icon 2
+          Icon 1<br />Icon 2
          </div>
-       </div>
-      </div>
-
-      <nav class="navbar navbar-default">
-       <div class="container-fluid">
-        <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">CAUGHT ITEMS</a></li>
-            <li><a href="#">BEST PRACTICES</a></li>
-            <li><a href="#">TASKS</a></li>
-            <li><a href="#">HISTORY</a></li>
+       </div>
+
+       <div class="panel override">
+        <div class="navbar-default">
+         <!-- start green navbar -->
+         <nav class="navbar navbar-default">
+          <div class="container-fluid">
+           <div class="navbar-header">
+
+            <ul class="nav navbar-nav">
+             <li><a href="#">CAUGHT ITEMS</a></li>
+             <li><a href="#">BEST PRACTICES</a></li>
+             <li><a href="#">TASKS</a></li>
+             <li><a href="#">HISTORY</a></li>
+            </ul>
+           </div>
+           <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+             <li>
+              <a class="glyphicon glyphicon-menu-up" href="#"></a>
+             </li>
+            </ul>
+           </div>
+           <!--/.nav-collapse -->
+          </div>
+          <!--/.container-fluid -->
+         </nav>
+         <!-- end green navbar -->
+        </div>
+
+        <div class="navbar-default chat-panel">
+         <div id="navbar" class="navbar-collapse collapse">
+           <div class="navbar-header">
+            <a class="nav navbar-nav" href="#">Pampers Diapers (39766)</a>
+           </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><span class="glyphicon glyphicon-usd"></span>$3584</li>
+            <li><i class="fa fa-commenting-o"></i>3</li>
+           <li>
+            <a class="glyphicon glyphicon-menu-down" href="#"></a>
+           </li>
           </ul>
-         <ul class="nav navbar-nav navbar-right">
-
-          <li class="dropdown">
-           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-           </ul>
-          </li>
-         </ul>
-        </div>
-        <!--/.nav-collapse -->
-
-        <div class="panel panel-default">
-         <div class="panel-body">
-          Status bar for chat
+         </div>
+         <div class="gray-bg">
+          <!-- main chat window -->
+          <div id="page-content-wrapper">
+           <div class="container-fluid">
+            <div class="row">
+             <div class="col-lg-12">
+              <div class="container-fluid messages">
+               <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="glyphicon glyphicon-paperclip"></span>
+                <span class="input-group-btn"><button class="btn btn-default" type="button">Add</button></span>
+               </div>
+               <div class="row" style="height: 500px" ng-repeat="message in roomMessages">
+                <div class="col col-lg-6">
+                 <div class="name"><strong>{{message.name}}</strong></div>
+                 <div class="message">{{message.message}}</div>
+                </div>
+                <div class="col col-lg-6 text-right">
+                 <div class="time">{{message.sendAt}}</div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
          </div>
         </div>
-
+        <!-- Chat window -->
        </div>
-       <!--/.container-fluid -->
-      </nav>
 
+      </div>
      </div>
+
     </div>
 
-   </div>
+    <div class="col-md-3">
 
-   <div class="col-md-3">
-
-    <div class="panel panel-default">
-     <div class="panel-heading">
-      <h3 class="panel-title">Status<span class="glyphicon glyphicon-pencil navbar-right"></span></h3>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">Status<span class="glyphicon glyphicon-pencil navbar-right"></span></h3>
+      </div>
+      <div class="panel-body">
+       In Progress
+      </div>
      </div>
-     <div class="panel-body">
-      In Progress
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">Resolution</h3>
+      </div>
+      <div class="panel-body">
+       No Resolution
+      </div>
      </div>
-    </div>
-    <div class="panel panel-default">
-     <div class="panel-heading">
-      <h3 class="panel-title">Resolution</h3>
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">Classification</h3>
+      </div>
+      <div class="panel-body">
+       No Classification
+      </div>
      </div>
-     <div class="panel-body">
-      No Resolution
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">Recorded Value</h3>
+      </div>
+      <div class="panel-body">
+       No Recorded Value
+      </div>
      </div>
-    </div>
-    <div class="panel panel-default">
-     <div class="panel-heading">
-      <h3 class="panel-title">Classification</h3>
-     </div>
-     <div class="panel-body">
-      No Classification
-     </div>
-    </div>
-    <div class="panel panel-default">
-     <div class="panel-heading">
-      <h3 class="panel-title">Recorded Value</h3>
-     </div>
-     <div class="panel-body">
-      No Recorded Value
-     </div>
-    </div>
-    <div class="panel panel-default">
-     <div class="panel-heading">
-      <h3 class="panel-title">Labels</h3>
-     </div>
-     <div class="panel-body">
-      Damages, High Risk Product
+     <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title">Labels</h3>
+      </div>
+      <div class="panel-body">
+       Damages, High Risk Product
+      </div>
      </div>
     </div>
    </div>
   </div>
- </div>
  </div>
 
  <!--this is concatenated by gulp-useref-->
