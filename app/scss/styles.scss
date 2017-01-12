@@ -90,6 +90,14 @@ form {
     display: inline-table;
 }
 
+.chat-status-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: #fff;
+  background: #000;
+}
+
 input {
     vertical-align: middle;
 }
