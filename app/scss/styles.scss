@@ -128,18 +128,21 @@ input {
 }
 
 .glyphicon {
-    z-index: 2;
 }
 
 .glyphicon.glyphicon-one-fine-empty-dot {
-    margin-bottom: -.8em;
+    margin-top: -2.3em;
+    margin-right: -1.65em;
     overflow: hidden;
 }
 
 .glyphicon.glyphicon-one-fine-empty-dot:before {
     content: "\25cb";
-    font-size: 3em;
-    z-index: 1;
+    font-size: 4em;
+}
+
+.glyphicon.glyphicon-sm {
+    font-size: .6em;
 }
 
 .panel.override {
@@ -159,4 +162,8 @@ input {
 
 .vertical-spacing {
     margin: 15px;
+}
+
+.right-spacing {
+    margin-right: 5px;
 }
