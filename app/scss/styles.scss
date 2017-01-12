@@ -59,7 +59,6 @@ form {
 .neat-spacing {
     padding: 10px;
 }
-
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url('/fonts/glyphicons-halflings-regular.eot');
@@ -100,6 +99,7 @@ input {
     text-align: center;
     width: 50px;
     height: 50px;
+    line-height: 50px;
 }
 
 .thumbnail {
@@ -147,12 +147,16 @@ input {
 }
 
 .chatbox-status {
-  font-size: 1.2em;
-  line-height: 50px;
+    font-size: 1.2em;
+    line-height: 50px;
 }
 
 .chat-panel {
     margin: 0 15px;
     position: relative;
     top: -20px;
+}
+
+.vertical-spacing {
+    margin: 15px;
 }
