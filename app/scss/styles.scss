@@ -1,7 +1,6 @@
 $icon-font-path: '../fonts/';
-
 @function font-path($path) {
-  @return $path;
+     @return $path;
 }
 
 body {
@@ -17,9 +16,7 @@ ul {
     background-color: #f3f3f3;
 }
 
-#search {
-
-}
+#search {}
 
 #search input[type="text"] {
     background: url("/images/search-white.png") no-repeat 10px 6px #444;
@@ -64,90 +61,98 @@ form {
 }
 
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('/fonts/glyphicons-halflings-regular.eot');
+    font-family: 'Glyphicons Halflings';
+    src: url('/fonts/glyphicons-halflings-regular.eot');
 }
 
 .glyphicon-inverse {
-  color: #fff;
+    color: #fff;
 }
 
 .black-bg {
-  background-color: black;
+    background-color: black;
 }
 
 .white-bg {
-  background-color: white;
+    background-color: white;
 }
 
 .gray-bg {
-  background-color: #e6e6e6;
+    background-color: #e6e6e6;
 }
 
 .circle {
-  width:40px;
-  height:40px;
-  border-radius:100%;
-  font-size:20px;
-  color:#fff;
-  background:#000;
-  display:inline-table;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    color: #fff;
+    background: #000;
+    display: inline-table;
 }
 
 input {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .icon {
     display: block;
-    text-align:center;
-    width:50px;
-    height:50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
 }
 
 .thumbnail {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  overflow: hidden;
-  margin: 3px 20px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 3px 20px;
 }
+
 .thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
+
 .thumbnail img.portrait {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .glyphicon {
-  z-index: 2;
+    z-index: 2;
 }
 
 .glyphicon.glyphicon-one-fine-empty-dot {
     margin-bottom: -.8em;
     overflow: hidden;
 }
+
 .glyphicon.glyphicon-one-fine-empty-dot:before {
-    content:"\25cb";
+    content: "\25cb";
     font-size: 3em;
     z-index: 1;
 }
 
 .panel.override {
-  box-shadow: none;
+    box-shadow: none;
+}
+
+.chatbox-status {
+  font-size: 1.2em;
+  line-height: 50px;
 }
 
 .chat-panel {
-  margin: 0 15px;
-  position: relative;
-  top: -20px;
+    margin: 0 15px;
+    position: relative;
+    top: -20px;
 }
