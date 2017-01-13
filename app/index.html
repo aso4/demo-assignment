@@ -104,7 +104,7 @@
           </div>
          </div>
          <div class="col-md-2">
-          <span class="info">ASSIGNED TO:<br>John Smith</span>
+          <span class="info"><span class="status">ASSIGNED TO:</span><br>John Smith</span>
          </div>
 
          <div class="col-md-1">
@@ -113,7 +113,7 @@
           </div>
          </div>
          <div class="col-md-2">
-          <span class="info">DUE DATE:<br> Sep 15, 2016</span>
+          <span class="info"><span class="status">DUE DATE:</span><br> Sep 15, 2016</span>
          </div>
 
          <div class="col-md-1">
@@ -122,7 +122,7 @@
           </div>
          </div>
          <div class="col-md-2">
-          <span class="info">RISK FACTOR:<br> High Risk</span>
+          <span class="info"><span class="status">RISK FACTOR:</span><br> High Risk</span>
          </div>
 
          <div class="col-md-1">
@@ -131,7 +131,7 @@
           </div>
          </div>
          <div class="col-md-2">
-          <span class="info">VALUE:<br> $5000</span>
+          <span class="info"><span class="status">VALUE:</span><br> $5000</span>
          </div>
 
 
@@ -146,7 +146,7 @@
          </div>
 
          <div class="col-md-7">
-          ENTITY:<br /> Holland and Sherry Store - Savile Row branch (Number 1345)
+          <span class="status">ENTITY:</span><br /> Holland and Sherry Store - Savile Row branch (Number 1345)
          </div>
         </div>
         <!-- container -->
@@ -174,10 +174,10 @@
            <div class="navbar-header">
             <div class="col-md-11">
              <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
-              <a href="#" class="btn">CAUGHT ITEMS</a>
-              <a href="#" class="btn">BEST PRACTICES</a>
-              <a href="#" class="btn">TASKS</a>
-              <a href="#" class="btn">HISTORY</a>
+              <a href="#" class="btn">CAUGHT ITEMS (4)</a>
+              <a href="#" class="btn">BEST PRACTICES (3)</a>
+              <a href="#" class="btn">TASKS (3)</a>
+              <a href="#" class="btn">HISTORY (4)</a>
              </div>
             </div>
             <div class="nav navbar-nav navbar-right col-md-1">
@@ -244,6 +244,8 @@
                </div>
                <!-- show messages -->
                <div class="row col-lg-12" style="height: 500px" ng-repeat="message in roomMessages">
+
+                 <!-- begin message 1 -->
                 <div class="col-lg-1">
                   <span class="dropdown-toggle thumbnail" style="margin-top: 10px">
                    <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait"/>
@@ -253,8 +255,17 @@
                  <div class="col-lg-11 message">
                    <div class="arrow-left" style="margin: 25px 40px 0 0"></div><span id="message" style="margin: -30px 0 0 5px">This is an example of a single line, short comment with no attachment.</span>
                  </div>
+                 <!-- end message 1 -->
 
+                 <!-- clearfix -->
                  <div class="container"></div>
+
+                 <!-- begin message 2 -->
+                 <div class="col-lg-1">
+                   <span class="dropdown-toggle thumbnail" style="margin-top: 10px">
+                    <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait"/>
+                   </span>
+                 </div>
 
                   <div class="col-lg-11 message">
                     <div class="arrow-left" style="margin: 25px 40px 0 0"></div>
@@ -265,7 +276,7 @@
                       This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state...
                       <br>
                       This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state...
-                      <div class="blue-bg">
+                      <div class="blue-bg" style="margin: 10px">
                         <ul class="list-inline blue-bg">
                           <li>
                             <figure>
@@ -289,6 +300,11 @@
                     </span>
 
                   </div>
+                  <!-- end message 2 -->
+
+                  <!-- clearfix -->
+                  <div class="container"></div>
+
 
                </div>
               </div>
