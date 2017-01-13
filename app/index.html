@@ -21,7 +21,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"><span class="white">Abercrombie & Fitch logo</span></a>
+    <a class="navbar-brand" href="#"><span class="white">Abercrombie & Fitch</span></a>
    </div>
    <div id="navbar-right" class="navbar-collapse collapse" style="border:none">
     <ul class="nav navbar-nav navbar-right black-bg" style="border:none">
@@ -32,11 +32,11 @@
       <span class="sr-only">(current)</span>
      </li>
      <li class="dropdown">
-      <a href="#" class="dropdown-toggle thumbnail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <a href="#" class="open thumbnail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
        <!-- profile dropdown -->
        <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait" alt="Image" />
       </a>
-      <ul class="dropdown-menu">
+      <ul class="dropdown-menu submenu">
        <li><a href="#">Action</a></li>
        <li><a href="#">Another action</a></li>
        <li><a href="#">Something else here</a></li>
@@ -158,10 +158,14 @@
           Store <a href="#">Boston (130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity
          </div>
          <div class="col-md-1 navbar-right">
-          <span class="glyphicon glyphicon-pencil glyphicon-inverse" style="font-size: .8em"></span>
-          <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
-          <br /><span class="glyphicon glyphicon-resize-full glyphicon-inverse" style="font-size: .8em"></span>
-          <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
+          <a href="#"><div>
+            <span class="glyphicon glyphicon-pencil glyphicon-inverse" style="font-size: .8em"></span>
+            <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
+          </div></a>
+          <a id="expand-menu"><div>
+            <span class="glyphicon glyphicon-resize-full glyphicon-inverse" style="font-size: .8em"></span>
+            <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
+          </div></a>
          </div>
         </div>
        </div>
@@ -239,11 +243,11 @@
                  </div>
                 </div>
                 <div class="input-group-btn">
-                 <button type="button" class="btn btn-primary btn-lg btn-block blue-bg" style="border-radius: 20px; width: 100px">Add</button>
+                 <button type="button" class="btn btn-primary btn-lg btn-block blue-bg" style="border-radius: 20px; width: 100px; z-index: 0">Add</button>
                 </div>
                </div>
                <!-- show messages -->
-               <div class="row col-lg-12" style="height: 500px" ng-repeat="message in roomMessages">
+               <div class="row col-lg-12" style="height: 500px; overflow: auto" ng-repeat="message in roomMessages">
 
                 <!-- begin message 1 -->
                 <div class="col-lg-1">
@@ -256,6 +260,13 @@
                  <div class="arrow-left" style="margin: 25px 40px 0 0"></div><span id="message" style="margin: -30px 0 0 5px">This is an example of a single line, short comment with no attachment.</span>
                 </div>
                 <!-- end message 1 -->
+
+                <!-- clearfix -->
+                <div class="container"></div>
+
+                <div class="row" style="margin: 15px 0 5px 0">
+                  <span class="col-lg-2"></span><span class="status">SEP 13, 13:06</span>
+                </div>
 
                 <!-- clearfix -->
                 <div class="container"></div>
@@ -368,6 +379,20 @@
   </div>
  </div>
 
+ <!-- Trigger/Open The Modal -->
+ <button id="myBtn">Open Modal</button>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+
+   <!-- Modal content -->
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <p>Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.  <span><a href="#">Click here</a> to find out more.</span></p>
+   </div>
+
+ </div>
+
  <!--this is concatenated by gulp-useref-->
 
  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
@@ -399,9 +424,30 @@
  <script src="/js/main.js"></script>
  <script src="/js/Messages.js"></script>
  <script src="/js/RoomCtrl.js"></script>
-
  <!-- Placed at the end of the document so the pages load faster -->
 
+ <script>
+ // Get the modal
+ var modal = document.getElementById('myModal');
+ // Get the button that opens the modal
+ var btn = document.getElementById("expand-menu");
+ // Get the <span> element that closes the modal
+ var span = document.getElementsByClassName("close")[0];
+ // When the user clicks on the button, open the modal
+ btn.onclick = function() {
+     modal.style.display = "block";
+ }
+ // When the user clicks on <span> (x), close the modal
+ span.onclick = function() {
+     modal.style.display = "none";
+ }
+ // When the user clicks anywhere outside of the modal, close it
+ window.onclick = function(event) {
+     if (event.target == modal) {
+         modal.style.display = "none";
+     }
+ }
+ </script>
 </body>
 
 </html>
