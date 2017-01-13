@@ -32,10 +32,11 @@
       <span class="sr-only">(current)</span>
      </li>
      <li class="dropdown">
-      <a href="#" class="open thumbnail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <a href="#" id="expand-profile-menu" class="open thumbnail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
        <!-- profile dropdown -->
        <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait" alt="Image" />
       </a>
+      <!--
       <ul class="dropdown-menu submenu">
        <li><a href="#">Action</a></li>
        <li><a href="#">Another action</a></li>
@@ -45,6 +46,7 @@
        <li><a href="#">Separated link</a></li>
        <li><a href="#">One more separated link</a></li>
       </ul>
+      -->
      </li>
      <li>
       <a class="glyphicon glyphicon-log-out" href="#"></a>
@@ -384,13 +386,26 @@
 
  <!-- The Modal -->
  <div id="myModal" class="modal">
-
    <!-- Modal content -->
    <div class="modal-content">
      <span class="close">&times;</span>
      <p>Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.  <span><a href="#">Click here</a> to find out more.</span></p>
    </div>
+ </div>
 
+ <!-- profile menu -->
+ <div id="myProfileModal" class="no-dimming-modal">
+   <div class="modal-profile">
+     <ul>
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Third action</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Nav header</li>
+      <li><a href="#">Separated link</a></li>
+      <li><a href="#">Separated link</a></li>
+     </ul>
+   </div>
  </div>
 
  <!--this is concatenated by gulp-useref-->
@@ -429,22 +444,34 @@
  <script>
  // Get the modal
  var modal = document.getElementById('myModal');
+ var profileModal = document.getElementById('myProfileModal');
  // Get the button that opens the modal
  var btn = document.getElementById("expand-menu");
+ var btn2 = document.getElementById("expand-profile-menu");
  // Get the <span> element that closes the modal
  var span = document.getElementsByClassName("close")[0];
  // When the user clicks on the button, open the modal
  btn.onclick = function() {
      modal.style.display = "block";
  }
+ btn2.onclick = function() {
+   profileModal.style.display = "block";
+ }
  // When the user clicks on <span> (x), close the modal
  span.onclick = function() {
      modal.style.display = "none";
  }
+
  // When the user clicks anywhere outside of the modal, close it
  window.onclick = function(event) {
      if (event.target == modal) {
          modal.style.display = "none";
+     }
+ }
+
+ window.onclick = function(event) {
+     if (event.target == profileModal) {
+         profileModal.style.display = "none";
      }
  }
  </script>
