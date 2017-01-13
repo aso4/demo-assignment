@@ -22,6 +22,16 @@ $('#messageInput').keypress(function(e) {
     }
 });
 
+$('#messageButton').on('click', function(e) {
+    if( $('#messageInput').val() ) {
+      var text = $('#messageInput').val();
+      messagesRef.push({
+          text: text
+      });
+      $('#messageInput').val('');
+    };
+});
+
 // Add a callback that is triggered for each chat message.
 messagesRef.on('child_added', function(snapshot) {
     var message = snapshot.val();
