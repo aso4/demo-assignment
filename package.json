@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/aso4/demo-assignment.git"
   },
-  "main": "server.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "node app",
     "postinstall": "gulp default"
