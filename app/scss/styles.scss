@@ -141,6 +141,30 @@ span#message {
   border: none;
 }
 
+.shadow-gray-bg {
+  background-color: #1a1a1a;
+}
+
+.digg-blue-bg {
+  background-color: #356AA0;
+}
+
+.teal-bg {
+  background-color: #00cc99;
+}
+
+.teal {
+  color: #00cc99;
+}
+
+.last-fm-crimson {
+  background-color: #b30047;
+}
+
+.white {
+  color: white;
+}
+
 .circle {
     width: 40px;
     height: 40px;
@@ -271,4 +295,9 @@ span#message {
   font-family: tahoma, sans-serif;
   font-size: 11px;
   font-weight: bold;
+}
+
+.sidebar-status {
+  font-weight: bold;
+  color: white;
 }
