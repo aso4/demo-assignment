@@ -7,6 +7,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
  <title>Demo Assignment</title>
  <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -160,14 +161,18 @@
           Store <a href="#">Boston (130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity
          </div>
          <div class="col-md-1 navbar-right">
-          <a href="#"><div>
+          <a href="#">
+           <div>
             <span class="glyphicon glyphicon-pencil glyphicon-inverse" style="font-size: .8em"></span>
             <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
-          </div></a>
-          <a id="expand-menu"><div>
+           </div>
+          </a>
+          <a id="expand-menu">
+           <div>
             <span class="glyphicon glyphicon-resize-full glyphicon-inverse" style="font-size: .8em"></span>
             <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
-          </div></a>
+           </div>
+          </a>
          </div>
         </div>
        </div>
@@ -234,6 +239,8 @@
           <div id="page-content-wrapper">
            <div class="container-fluid">
             <div class="row">
+
+             <!-- old messages container -->
              <div class="col-lg-12">
               <div class="container-fluid messages">
                <!-- input field -->
@@ -241,15 +248,15 @@
                 <div class="col-md-12">
                  <div class="inner-addon right-addon">
                   <a href="#" class="glyphicon glyphicon-paperclip" style="margin-top: 10px; font-size: 2em; color: gray"></a>
-                  <input id="message" type="text" style="box-shadow: none"/>
+                  <input type='text' id='messageInput' placeholder='Enter message...'>
                  </div>
                 </div>
                 <div class="input-group-btn">
-                 <button type="button" class="btn btn-primary btn-lg btn-block blue-bg" style="border-radius: 20px; width: 100px; z-index: 0">Add</button>
+                 <button id="messageButton" type="button" class="btn btn-primary btn-lg btn-block blue-bg" style="border-radius: 20px; width: 100px; z-index: 0">Add</button>
                 </div>
                </div>
                <!-- show messages -->
-               <div class="row col-lg-12" style="height: 500px; overflow: auto" ng-repeat="message in roomMessages">
+               <div class="row col-lg-12" style="height: 420px" ng-repeat="message in roomMessages">
 
                 <!-- begin message 1 -->
                 <div class="col-lg-1">
@@ -267,22 +274,23 @@
                 <div class="container"></div>
 
                 <div class="row" style="margin: 15px 0 5px 0">
-                  <span class="col-lg-2"></span><span class="status">SEP 13, 13:06</span>
+                 <span class="col-lg-2"></span><span class="status">SEP 13, 13:06</span>
                 </div>
 
                 <!-- clearfix -->
                 <div class="container"></div>
 
                 <!-- begin message 2 -->
-                <div class="col-lg-1">
-                 <span class="dropdown-toggle thumbnail" style="margin-top: 10px">
+                <div id="message-container">
+                 <div class="col-lg-1">
+                  <span class="dropdown-toggle thumbnail" style="margin-top: 10px">
                     <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait"/>
                    </span>
-                </div>
+                 </div>
 
-                <div class="col-lg-11 message">
-                 <div class="arrow-left" style="margin: 25px 40px 0 0"></div>
-                 <span id="message" style="margin: -30px 0 0 5px">
+                 <div class="col-lg-11 message">
+                  <div class="arrow-left" style="margin: 25px 40px 0 0"></div>
+                  <span id="message" style="margin: -30px 0 0 5px">
                       This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state
                       This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state
                       <br>
@@ -312,16 +320,42 @@
                       </div>
                     </span>
 
+                 </div>
                 </div>
+                <!-- end message container-->
                 <!-- end message 2 -->
+
+
 
                 <!-- clearfix -->
                 <div class="container"></div>
 
-
                </div>
               </div>
              </div>
+            </div>
+
+            <!-- scrollable messages container -->
+            <div class="wrapper">
+             <main>
+              <div class="col">
+               <div class="colcontent">
+                Minus blanditiis molestiae dicta fugit sint consectetur nesciunt mollitia nisi, voluptates deserunt culpa repellendus, placeat eveniet at in quas? Voluptatibus vitae nihil iusto aliquam cupiditate ipsum illo culpa enim nemo, voluptas quia aperiam corporis
+                eligendi tenetur, molestiae aspernatur et quo eum nesciunt. Eos similique quidem consequuntur deserunt corporis temporibus inventore nobis ea laborum debitis accusamus culpa suscipit odit rem sit, reprehenderit quasi, blanditiis iure ipsum
+                excepturi quis fuga sed. Porro ut ipsum minus tempore sequi reprehenderit, rem commodi dignissimos, iste dolorum totam ullam non. Enim, officia eligendi unde? Excepturi maxime pariatur dolore quisquam maiores ullam debitis perferendis
+                qui eaque cumque totam dolorum delectus illo saepe atque earum repellat, deleniti non blanditiis odit, ad. Ipsa inventore fuga, error voluptate esse corporis aliquid velit quibusdam reprehenderit atque nemo delectus libero, assumenda doloribus
+                deleniti? Doloremque, libero maiores cupiditate ad, laboriosam dolorum necessitatibus eveniet officia quibusdam esse blanditiis impedit eum ipsum beatae assumenda quaerat aut quos nemo atque ipsam debitis nam earum architecto expedita?
+                Quibusdam eaque atque minima, enim vero accusantium dignissimos odio iusto expedita inventore doloremque ab omnis porro unde eius? Labore odio molestiae ad dolore dolor iusto, inventore fugit quae nihil mollitia temporibus, quis eius quam
+                iste magni repudiandae nesciunt at, aliquam minima atque porro dolorem eligendi! Iusto, nobis, commodi at atque cupiditate suscipit omnis ratione et sequi animi! Repellendus rem laudantium officiis dolor, obcaecati inventore sequi voluptatum
+                voluptas libero. Porro libero odio ipsum labore dolorum obcaecati illum molestiae, maxime consequuntur saepe maiores eligendi tempore recusandae corporis voluptas atque ad aliquam. Tempore, non possimus suscipit! Sequi quasi odio, eligendi
+                exercitationem ab quam excepturi non voluptatem quia nihil esse dolor corrupti architecto nostrum consequuntur praesentium fuga. Porro magni, alias consequuntur recusandae similique quos mollitia quod reprehenderit, eum, eligendi dolor
+                possimus autem necessitatibus officiis, quasi quibusdam repudiandae fugit ab. Quam aspernatur velit.
+                <!-- inside colcontent -->
+                <div id='messagesDiv'></div>
+               </div>
+               <div class="colfoot"></div>
+              </div>
+             </main>
             </div>
            </div>
           </div>
@@ -381,100 +415,33 @@
   </div>
  </div>
 
- <!-- Trigger/Open The Modal -->
- <button id="myBtn">Open Modal</button>
-
  <!-- The Modal -->
  <div id="myModal" class="modal">
-   <!-- Modal content -->
-   <div class="modal-content">
-     <span class="close">&times;</span>
-     <p>Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity.  <span><a href="#">Click here</a> to find out more.</span></p>
-   </div>
+  <!-- Modal content -->
+  <div class="modal-content">
+   <span class="close">&times;</span>
+   <p>Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity. <span><a href="#">Click here</a> to find out more.</span></p>
+  </div>
  </div>
 
  <!-- profile menu -->
  <div id="myProfileModal" class="no-dimming-modal">
-   <div class="modal-profile">
-     <ul>
-      <li><a href="#">Action</a></li>
-      <li><a href="#">Another action</a></li>
-      <li><a href="#">Third action</a></li>
-      <li role="separator" class="divider"></li>
-      <li class="dropdown-header">Nav header</li>
-      <li><a href="#">Separated link</a></li>
-      <li><a href="#">Separated link</a></li>
-     </ul>
-   </div>
+  <div class="modal-profile">
+   <ul>
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Third action</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="dropdown-header">Nav header</li>
+    <li><a href="#">Separated link</a></li>
+    <li><a href="#">Separated link</a></li>
+   </ul>
+  </div>
  </div>
 
- <!--this is concatenated by gulp-useref-->
+ <script src="/js/messages.js"></script>
+ <script src="/js/modals.js"></script>
 
- <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
- <script>
-  // Initialize Firebase
-  var config = {
-   apiKey: "AIzaSyA2JKS-Uc7fJw6zng4YD9fY2117itCNXtY",
-   authDomain: "fir-assignment-420f1.firebaseapp.com",
-   databaseURL: "https://fir-assignment-420f1.firebaseio.com",
-   storageBucket: "fir-assignment-420f1.appspot.com",
-   messagingSenderId: "469607847091"
-  };
-  firebase.initializeApp(config);
- </script>
-
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
- <!-- AngularFire -->
- <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
-
-
- <!--build:js js/main.min.js -->
- <script src="js/lib/a-library.js"></script>
- <script src="js/lib/another-library.js"></script>
- <script src="js/main.js"></script>
- <!-- endbuild -->
-
- <script src="/js/main.js"></script>
- <script src="/js/Messages.js"></script>
- <script src="/js/RoomCtrl.js"></script>
- <!-- Placed at the end of the document so the pages load faster -->
-
- <script>
- // Get the modal
- var modal = document.getElementById('myModal');
- var profileModal = document.getElementById('myProfileModal');
- // Get the button that opens the modal
- var btn = document.getElementById("expand-menu");
- var btn2 = document.getElementById("expand-profile-menu");
- // Get the <span> element that closes the modal
- var span = document.getElementsByClassName("close")[0];
- // When the user clicks on the button, open the modal
- btn.onclick = function() {
-     modal.style.display = "block";
- }
- btn2.onclick = function() {
-   profileModal.style.display = "block";
- }
- // When the user clicks on <span> (x), close the modal
- span.onclick = function() {
-     modal.style.display = "none";
- }
-
- // When the user clicks anywhere outside of the modal, close it
- window.onclick = function(event) {
-     if (event.target == modal) {
-         modal.style.display = "none";
-     }
- }
-
- window.onclick = function(event) {
-     if (event.target == profileModal) {
-         profileModal.style.display = "none";
-     }
- }
- </script>
 </body>
 
 </html>
