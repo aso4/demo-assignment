@@ -16,6 +16,14 @@ ul {
     background-color: #f3f3f3;
 }
 
+
+input[type=text] {
+  border-radius:30px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
 #search {}
 
 #search input[type="text"] {
@@ -51,6 +59,39 @@ form {
     display: block;
     margin: 0 auto;
 }
+
+#message form {
+  margin: 10px auto;
+  width: 150px;
+  padding: 6px 15px 6px 35px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.chat-btn {
+  border-radius: 10px;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
 
 .profile-shot {
     border-radius: 100%;
@@ -96,10 +137,6 @@ form {
   border-radius: 100%;
   color: #fff;
   background: #000;
-}
-
-input {
-    vertical-align: middle;
 }
 
 .icon {
