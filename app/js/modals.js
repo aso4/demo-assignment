@@ -10,6 +10,7 @@
  btn.onclick = function() {
      modal.style.display = "block";
  }
+ 
  btn2.onclick = function() {
      profileModal.style.display = "block";
      }
