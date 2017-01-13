@@ -69,6 +69,15 @@ form {
   border-radius: 20px;
 }
 
+span#message {
+  background: #4096EE;
+  color: white;
+  padding: 10px 40px 10px 10px;
+  margin: 10px;
+  border-radius: 20px;
+  position: absolute;
+}
+
 .chat-btn {
   border-radius: 10px;
 }
@@ -121,6 +130,11 @@ form {
     background-color: #e6e6e6;
 }
 
+.blue-bg {
+  background-color: #4096EE;
+  border: none;
+}
+
 .circle {
     width: 40px;
     height: 40px;
@@ -156,7 +170,27 @@ form {
     margin: 3px 20px;
 }
 
+.thumbnail-square {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 2px 0 2px;
+}
+
 .thumbnail img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.thumbnail-square img {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -211,4 +245,18 @@ form {
 
 .right-spacing {
     margin-right: 5px;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid #4096EE;
+}
+
+.container::after {
+    content:"";
+    display:table;
+    clear:both;
 }
