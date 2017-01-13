@@ -8,10 +8,9 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
-  },
+    "start": "node app",
+    "postinstall": "gulp default"
+  }
   "author": "Albert So",
   "license": "ISC",
   "dependencies": {
