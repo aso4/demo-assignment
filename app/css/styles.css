@@ -1,5 +1,326 @@
-.testing {
-  width: 71.42857%; }
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+div {
+  font-family: 'Open Sans', sans-serif; }
 
 body {
   background: #e6e6e6; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3; }
+
+input[type=text] {
+  border-radius: 30px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px; }
+
+#search input[type="text"] {
+  background: url("/images/search-white.png") no-repeat 10px 6px #444;
+  border: 0 none;
+  font: bold 12px Arial,Helvetica,Sans-serif;
+  color: #d7d7d7;
+  width: 150px;
+  padding: 6px 15px 6px 35px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s; }
+
+#search input[type="text"]:focus {
+  background: url("/images/search-white.png") no-repeat 10px 6px #fcfcfc;
+  color: #6a6f75;
+  width: 200px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
+
+form {
+  display: block;
+  margin: 0 auto; }
+
+#message form {
+  margin: 10px auto;
+  width: 150px;
+  padding: 6px 15px 6px 35px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+
+span#message {
+  background: #4096EE;
+  color: white;
+  padding: 10px 40px 10px 10px;
+  margin: 10px;
+  border-radius: 20px;
+  position: absolute; }
+
+.chat-btn {
+  border-radius: 10px; }
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative; }
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none; }
+
+/* align icon */
+.left-addon .glyphicon {
+  left: 0px; }
+
+.right-addon .glyphicon {
+  right: 0px; }
+
+/* add padding  */
+.left-addon input {
+  padding-left: 30px; }
+
+.right-addon input {
+  padding-right: 30px; }
+
+.profile-shot {
+  border-radius: 100%; }
+
+.neat-spacing {
+  padding: 10px; }
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("/fonts/glyphicons-halflings-regular.eot"); }
+
+.glyphicon-inverse {
+  color: #fff; }
+
+.black-bg {
+  background-color: black; }
+
+.white-bg {
+  background-color: white; }
+
+.gray-bg {
+  background-color: #e6e6e6; }
+
+.blue-bg {
+  background-color: #4096EE;
+  border: none; }
+
+.shadow-gray-bg {
+  background-color: #1a1a1a; }
+
+.digg-blue-bg {
+  background-color: #356AA0; }
+
+.teal-bg {
+  background-color: #00cc99; }
+
+.teal {
+  color: #00cc99; }
+
+.last-fm-crimson {
+  background-color: #b30047; }
+
+.white {
+  color: white; }
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  color: #fff;
+  background: #000;
+  display: inline-table; }
+
+.chat-status-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: #fff;
+  background: #000; }
+
+.icon {
+  display: block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px; }
+
+.thumbnail {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 3px 20px; }
+
+.thumbnail-square {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 2px 0 2px; }
+
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.thumbnail-square img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto; }
+
+.glyphicon.glyphicon-one-fine-empty-dot {
+  margin-top: -2.3em;
+  margin-right: -1.65em;
+  overflow: hidden; }
+
+.glyphicon.glyphicon-one-fine-empty-dot:before {
+  content: "\25cb";
+  font-size: 4em; }
+
+.glyphicon.glyphicon-sm {
+  font-size: .6em; }
+
+.panel.override {
+  box-shadow: none; }
+
+.chatbox-status {
+  font-size: 1.2em;
+  line-height: 50px; }
+
+.chat-panel {
+  margin: 0 15px;
+  position: relative;
+  top: -20px; }
+
+.vertical-spacing {
+  margin: 15px; }
+
+.right-spacing {
+  margin-right: 5px; }
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid #4096EE; }
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.status {
+  font-family: tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #7a7a7a; }
+
+.sidebar-status {
+  font-weight: bold;
+  color: white; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+.no-dimming-modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+.modal-profile {
+  /* doesn't work depending on screen */
+  background-color: #fefefe;
+  margin: 50px 0 0 1200px;
+  padding: none;
+  border: none;
+  width: 150px;
+  height: 150px;
+  /* Could be more or less, depending on screen size */ }
+
+.submenu {
+  position: inherit; }
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
