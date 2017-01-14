@@ -1,12 +1,445 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Demo Assignment</title>
-    <link rel="stylesheet" href="css/styles.css">
+<html lang="en">
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+ <title>Demo Assignment</title>
+ <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <!--this is concatenated by gulp-useref-->
-    <script src="js/main.min.js"></script>
+ <nav class="navbar navbar-default black-bg" style="margin: 0 0 5px 0">
+  <div class="container-fluid">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><span class="white">Abercrombie & Fitch</span></a>
+   </div>
+   <div id="navbar-right" class="navbar-collapse collapse" style="border:none">
+    <ul class="nav navbar-nav navbar-right black-bg" style="border:none">
+     <li class="active">
+      <form method="get" action="/search" id="search">
+       <input name="q" type="text" size="40" placeholder="Search...">
+      </form>
+      <span class="sr-only">(current)</span>
+     </li>
+     <li class="dropdown">
+      <a href="#" id="expand-profile-menu" class="open thumbnail" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+       <!-- profile dropdown -->
+       <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait" alt="Image" />
+      </a>
+      <!--
+      <ul class="dropdown-menu submenu">
+       <li><a href="#">Action</a></li>
+       <li><a href="#">Another action</a></li>
+       <li><a href="#">Something else here</a></li>
+       <li role="separator" class="divider"></li>
+       <li class="dropdown-header">Nav header</li>
+       <li><a href="#">Separated link</a></li>
+       <li><a href="#">One more separated link</a></li>
+      </ul>
+      -->
+     </li>
+     <li>
+      <a class="glyphicon glyphicon-log-out" href="#"></a>
+     </li>
+    </ul>
+   </div>
+   <!--/.nav-collapse -->
+  </div>
+  <!--/.container-fluid -->
+ </nav>
+
+ <div class="neat-spacing">
+  <nav class="navbar navbar-default" style="margin:0 auto; border: none; border-radius: 0">
+   <div class="container-fluid" style="background-color:#1a1a1a">
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a class="navbar-brand" href="#"><span class="white">Opportunities >> EV-15 High Damage Registration Path</span></a>
+    </div>
+    <div id="head-navbar" class="navbar-collapse collapse">
+
+     <ul class="nav navbar-nav navbar-right" style="border:none; background-color: #1a1a1a">
+      <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-horizontal glyphicon-inverse" style="font-size: 24px"></span></a>
+       <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">One more separated link</a></li>
+       </ul>
+      </li>
+     </ul>
+    </div>
+    <!--/.nav-collapse -->
+   </div>
+   <!--/.container-fluid -->
+  </nav>
+
+  <div class="neat-spacing white-bg">
+   <div class="row">
+    <div class="col-md-9">
+
+     <div class="row">
+      <div class="col-md-12">
+       <div class="neat-spacing">
+        <div class="row">
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-user glyphicon-inverse icon"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info"><span class="status">ASSIGNED TO:</span><br><span class="teal">John Smith</span></span>
+         </div>
+
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-calendar glyphicon-inverse icon"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info"><span class="status">DUE DATE:</span><br><span class="teal">Sep 15, 2016</span></span>
+         </div>
+
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-exclamation-sign glyphicon-inverse icon"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info"><span class="status">RISK FACTOR:</span><br><span class="teal">High Risk</span></span>
+         </div>
+
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-usd glyphicon-inverse icon"></i>
+          </div>
+         </div>
+         <div class="col-md-2">
+          <span class="info"><span class="status">VALUE:</span><br><span class="teal">$5000</span></span>
+         </div>
+
+
+        </div>
+        <div class="vertical-spacing">
+        </div>
+        <div class="row">
+         <div class="col-md-1">
+          <div class="circle">
+           <i class="glyphicon glyphicon-home glyphicon-inverse icon"></i>
+          </div>
+         </div>
+
+         <div class="col-md-7">
+          <span class="status">ENTITY:</span><br /><span class="teal">Holland and Sherry Store - Savile Row branch (Number 1345)</span>
+         </div>
+        </div>
+        <!-- container -->
+       </div>
+
+       <div class="panel panel-default">
+        <div class="panel-body black-bg">
+         <div class="col-md-9 white">
+          Store <a href="#">Boston (130)</a> was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity
+         </div>
+         <div class="col-md-1 navbar-right">
+          <a href="#">
+           <div>
+            <span class="glyphicon glyphicon-pencil glyphicon-inverse" style="font-size: .8em"></span>
+            <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
+           </div>
+          </a>
+          <a id="expand-menu">
+           <div>
+            <span class="glyphicon glyphicon-resize-full glyphicon-inverse" style="font-size: .8em"></span>
+            <span class="glyphicon glyphicon-one-fine-empty-dot glyphicon-inverse navbar-right right-spacing" style="margin: -3.5em 2.2em 0 0"></span>
+           </div>
+          </a>
+         </div>
+        </div>
+       </div>
+
+       <div class="panel override">
+        <div class="navbar-default">
+         <!-- start green navbar -->
+         <nav class="navbar navbar-default teal-bg" style="border:0">
+          <div class="container-fluid">
+           <div class="navbar-header">
+            <div class="col-md-11">
+             <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+              <a href="#" class="btn white">CAUGHT ITEMS (4)</a>
+              <a href="#" class="btn white">BEST PRACTICES (3)</a>
+              <a href="#" class="btn white">TASKS (3)</a>
+              <a href="#" class="btn white">HISTORY (4)</a>
+             </div>
+            </div>
+            <div class="nav navbar-nav navbar-right col-md-1">
+             <a class="glyphicon glyphicon-menu-up btn white"></a>
+            </div>
+
+           </div>
+          </div>
+          <!--/.container-fluid -->
+         </nav>
+         <!-- end green navbar -->
+        </div>
+
+        <div class="navbar-default chat-panel">
+         <div id="chat-status-navbar" class="navbar-collapse collapse">
+          <div class="navbar-header">
+           <a class="nav navbar-nav chatbox-status teal" href="#">Pampers Diapers (39766)</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right chatbox-status" style="border:none">
+           <li>
+            <div class="col-md-1">
+             <span class="glyphicon glyphicon-usd glyphicon-sm teal"></span>
+             <span class="chat-status-circle"></span>
+            </div>
+           </li>
+           <li>
+            <div class="col-md-1 teal">
+             $3584
+            </div>
+           </li>
+           <li>
+            <div class="col-md-1 teal">
+             <i class="fa fa-commenting-o"></i>
+            </div>
+           </li>
+           <li>
+            <div class="col-md-1 teal">
+             3
+            </div>
+           </li>
+           <li>
+            <a class="glyphicon glyphicon-menu-down" href="#"></a>
+           </li>
+          </ul>
+         </div>
+         <div class="gray-bg">
+          <!-- main chat window -->
+          <div id="page-content-wrapper">
+           <div class="container-fluid">
+            <div class="row">
+
+             <!-- old messages container -->
+             <div class="col-lg-12">
+              <div class="container-fluid messages">
+               <!-- input field -->
+               <div class="input-group">
+                <div class="col-md-12">
+                 <div class="inner-addon right-addon">
+                  <a href="#" class="glyphicon glyphicon-paperclip" style="margin-top: 10px; font-size: 2em; color: gray"></a>
+                  <input type='text' id='messageInput' placeholder='Enter message...'>
+                 </div>
+                </div>
+                <div class="input-group-btn">
+                 <button id="messageButton" type="button" class="btn btn-primary btn-lg btn-block blue-bg" style="border-radius: 20px; width: 100px; z-index: 0">Add</button>
+                </div>
+               </div>
+               <!-- show messages -->
+               <div class="row col-lg-12" style="height: 420px" ng-repeat="message in roomMessages">
+
+                <!-- begin message 1 -->
+                <div class="col-lg-1">
+                 <span class="dropdown-toggle thumbnail" style="margin-top: 10px">
+                   <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait"/>
+                  </span>
+                </div>
+
+                <div class="col-lg-11 message">
+                 <div class="arrow-left" style="margin: 25px 40px 0 0"></div><span id="message" style="margin: -30px 0 0 5px">This is an example of a single line, short comment with no attachment.</span>
+                </div>
+                <!-- end message 1 -->
+
+                <!-- clearfix -->
+                <div class="container"></div>
+
+                <div class="row" style="margin: 15px 0 5px 0">
+                 <span class="col-lg-2"></span><span class="status">SEP 13, 13:06</span>
+                </div>
+
+                <!-- clearfix -->
+                <div class="container"></div>
+
+                <!-- begin message 2 -->
+                <div id="message-container">
+                 <div class="col-lg-1">
+                  <span class="dropdown-toggle thumbnail" style="margin-top: 10px">
+                    <img src="http://i666.photobucket.com/albums/vv22/knittinginmysleep/tammyree_edited.jpg" class="portrait"/>
+                   </span>
+                 </div>
+
+                 <div class="col-lg-11 message">
+                  <div class="arrow-left" style="margin: 25px 40px 0 0"></div>
+                  <span id="message" style="margin: -30px 0 0 5px">
+                      This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state
+                      This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state
+                      <br>
+                      This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state...
+                      <br>
+                      This is an example of a single line, short comment with no attachment. The arrow on the right appears on hover state...
+                      <div class="blue-bg" style="margin: 10px">
+                        <ul class="list-inline blue-bg">
+                          <li>
+                            <figure>
+                              <img class="thumbnail-square" src="images/acrobatpdf.jpg" />
+                              <figcaption>Filename.pdf</figcaption>
+                            </figure>
+                          </li>
+                          <li>
+                            <figure>
+                              <img class="thumbnail-square" src="images/acrobatpdf.jpg" />
+                              <figcaption>Filename.pdf</figcaption>
+                            </figure>
+                          </li>
+                          <li>
+                            <figure>
+                              <img class="thumbnail-square" src="images/berries.jpeg" />
+                              <figcaption>Filename.png</figcaption>
+                            </figure>
+                        </ul>
+                      </div>
+                    </span>
+
+                 </div>
+                </div>
+                <!-- end message container-->
+                <!-- end message 2 -->
+
+                <!-- clearfix -->
+                <div class="container"></div>
+
+               </div>
+              </div>
+             </div>
+            </div>
+
+            <!-- scrollable messages container -->
+            <div class="wrapper">
+             <main>
+              <div class="col">
+               <div class="colcontent">
+                Minus blanditiis molestiae dicta fugit sint consectetur nesciunt mollitia nisi, voluptates deserunt culpa repellendus, placeat eveniet at in quas? Voluptatibus vitae nihil iusto aliquam cupiditate ipsum illo culpa enim nemo, voluptas quia aperiam corporis
+                eligendi tenetur, molestiae aspernatur et quo eum nesciunt. Eos similique quidem consequuntur deserunt corporis temporibus inventore nobis ea laborum debitis accusamus culpa suscipit odit rem sit, reprehenderit quasi, blanditiis iure ipsum
+                excepturi quis fuga sed. Porro ut ipsum minus tempore sequi reprehenderit, rem commodi dignissimos, iste dolorum totam ullam non. Enim, officia eligendi unde? Excepturi maxime pariatur dolore quisquam maiores ullam debitis perferendis
+                qui eaque cumque totam dolorum delectus illo saepe atque earum repellat, deleniti non blanditiis odit, ad. Ipsa inventore fuga, error voluptate esse corporis aliquid velit quibusdam reprehenderit atque nemo delectus libero, assumenda doloribus
+                deleniti? Doloremque, libero maiores cupiditate ad, laboriosam dolorum necessitatibus eveniet officia quibusdam esse blanditiis impedit eum ipsum beatae assumenda quaerat aut quos nemo atque ipsam debitis nam earum architecto expedita?
+                Quibusdam eaque atque minima, enim vero accusantium dignissimos odio iusto expedita inventore doloremque ab omnis porro unde eius? Labore odio molestiae ad dolore dolor iusto, inventore fugit quae nihil mollitia temporibus, quis eius quam
+                iste magni repudiandae nesciunt at, aliquam minima atque porro dolorem eligendi! Iusto, nobis, commodi at atque cupiditate suscipit omnis ratione et sequi animi! Repellendus rem laudantium officiis dolor, obcaecati inventore sequi voluptatum
+                voluptas libero. Porro libero odio ipsum labore dolorum obcaecati illum molestiae, maxime consequuntur saepe maiores eligendi tempore recusandae corporis voluptas atque ad aliquam. Tempore, non possimus suscipit! Sequi quasi odio, eligendi
+                exercitationem ab quam excepturi non voluptatem quia nihil esse dolor corrupti architecto nostrum consequuntur praesentium fuga. Porro magni, alias consequuntur recusandae similique quos mollitia quod reprehenderit, eum, eligendi dolor
+                possimus autem necessitatibus officiis, quasi quibusdam repudiandae fugit ab. Quam aspernatur velit.
+                <!-- inside colcontent -->
+                <div id='messagesDiv'></div>
+               </div>
+               <div class="colfoot"></div>
+              </div>
+             </main>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <!-- Chat window -->
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-3">
+     <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#36393D; color:white; border:none">
+       <h3 class="panel-title">Status
+         <span class="glyphicon glyphicon-pencil navbar-right right-spacing" style="font-size: .85em"></span>
+         <span class="glyphicon glyphicon-one-fine-empty-dot navbar-right right-spacing"></span>
+       </h3>
+      </div>
+      <div class="panel-body black-bg">
+       <span class="sidebar-status">In Progress</span>
+      </div>
+     </div>
+     <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#36393D; color:white; border:none">
+       <h3 class="panel-title">Resolution</h3>
+      </div>
+      <div class="panel-body black-bg">
+       <span class="sidebar-status">No Resolution</span>
+      </div>
+     </div>
+     <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#4096EE; color:white; border:none">
+       <h3 class="panel-title">Classification</h3>
+      </div>
+      <div class="panel-body digg-blue-bg">
+       <span class="sidebar-status">No Classification</span>
+      </div>
+     </div>
+     <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#4096EE; color:white; border:none">
+       <h3 class="panel-title">Recorded Value</h3>
+      </div>
+      <div class="panel-body digg-blue-bg">
+       <span class="sidebar-status">No Recorded Value</span>
+      </div>
+     </div>
+     <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#e6005c; color:white; border:none">
+       <h3 class="panel-title">Labels</h3>
+      </div>
+      <div class="panel-body last-fm-crimson">
+       <span class="sidebar-status">Damages, High Risk Product</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+   <span class="close">&times;</span>
+   <p>Store Boston (130) was found with High Damage Registration for High Risk Products in the last 7 days compare to previous 14 days and compare to North region bench mark activity. <span><a href="#">Click here</a> to find out more.</span></p>
+  </div>
+ </div>
+
+ <!-- profile menu -->
+ <div id="myProfileModal" class="no-dimming-modal">
+  <div class="modal-profile">
+   <ul>
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Third action</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="dropdown-header">Nav header</li>
+    <li><a href="#">Separated link</a></li>
+    <li><a href="#">Separated link</a></li>
+   </ul>
+  </div>
+ </div>
+
+ <script src="/js/messages.js"></script>
+ <script src="/js/modals.js"></script>
+
 </body>
+
 </html>

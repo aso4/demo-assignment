@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'), // optimize images
     cache = require('gulp-cache'),
     del = require('del'),
+    connect = require('gulp-connect'),
     runSequence = require('run-sequence');
 
 gulp.task('build', function (callback) {
@@ -96,7 +97,7 @@ gulp.task('build', function (callback) {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: [your_project_path],
+    root: 'app',
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });
