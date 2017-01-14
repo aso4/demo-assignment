@@ -6,7 +6,10 @@
     "type": "git",
     "url": "https://github.com/aso4/demo-assignment.git"
   },
-  "main": "app.js",
+  "engines" : {
+    "node" : "7.4.0",
+    "npm"  : "4.1.2"
+  },
   "scripts": {
     "start": "node app.js",
     "postinstall": "gulp default"
