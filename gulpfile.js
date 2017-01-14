@@ -58,15 +58,6 @@ gulp.task('useref', function(){
 });
 
 gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
-  .pipe(imagemin({
-      // Setting interlaced to true
-      interlaced: true
-    }))
-  .pipe(gulp.dest('dist/images'))
-});
-
-gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
   .pipe(cache(imagemin({
@@ -86,13 +77,6 @@ gulp.task('clean:dist', function() { // delete dist folder and start clean
 
 gulp.task('cache:clear', function (callback) { // clear system cache including images
   return cache.clearAll(callback)
-});
-
-gulp.task('build', function (callback) {
-  runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
-    callback
-  )
 });
 
 gulp.task('serveprod', function() {
