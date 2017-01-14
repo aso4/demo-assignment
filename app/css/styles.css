@@ -356,3 +356,93 @@ main {
 .colfoot {
   background: #e6e6e6;
   flex: 0 0 50px; }
+
+.triangle-isosceles {
+  position: relative;
+  padding: 15px;
+  margin: 0 0 2em;
+  color: white;
+  background: #4096EE;
+  /* default background for browsers without gradient support */
+  /* css3 */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#4096EE), to(#4096EE));
+  background: -moz-linear-gradient(#4096EE, #4096EE);
+  background: -o-linear-gradient(#4096EE, #4096EE);
+  background: linear-gradient(#4096EE, #4096EE);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px; }
+
+.triangle-isosceles.left {
+  margin-left: 40px;
+  background: #4096EE; }
+
+.triangle-isosceles:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  /* value = - border-top-width - border-bottom-width */
+  left: 50px;
+  /* controls horizontal position */
+  border-width: 15px 15px 0;
+  /* vary these values to change the angle of the vertex */
+  border-style: solid;
+  border-color: #4096EE transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0; }
+
+.triangle-isosceles.left:after {
+  top: 16px;
+  /* controls vertical position */
+  left: -7px;
+  /* value = - border-left-width - border-right-width */
+  bottom: auto;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #4096EE; }
+
+.message-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 10.66667px 0;
+  padding: 10.66667px 0; }
+
+.message-wrapper .circle-wrapper {
+  height: 42.66667px;
+  width: 42.66667px;
+  border-radius: 50%;
+  margin-top: 3px;
+  float: left;
+  background: url("/images/tammyree_edited.jpg"); }
+
+.message-wrapper .text-wrapper {
+  padding: 10.66667px;
+  min-height: 42.66667px;
+  width: 90%;
+  margin: 0 10.66667px;
+  box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.3);
+  border-radius: 20px;
+  font-weight: 300;
+  position: relative;
+  /* word-break: break-all; */
+  opacity: 1; }
+
+.message-wrapper .text-wrapper:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid; }
+
+.message-wrapper.them .text-wrapper {
+  background: #4096EE;
+  float: left;
+  color: #ffffff;
+  left: 10px; }
+
+.message-wrapper.them .text-wrapper:before {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #4096EE transparent transparent;
+  position: absolute;
+  top: 12px;
+  left: -7px; }

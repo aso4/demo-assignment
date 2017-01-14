@@ -16,7 +16,8 @@ $('#messageInput').keypress(function(e) {
     if (e.keyCode == 13) {
         var text = $('#messageInput').val();
         messagesRef.push({
-            text: text
+            text: text,
+            time: new Date().toLocaleString()
         });
         $('#messageInput').val('');
     }
@@ -26,7 +27,8 @@ $('#messageButton').on('click', function(e) {
     if( $('#messageInput').val() ) {
       var text = $('#messageInput').val();
       messagesRef.push({
-          text: text
+          text: text,
+          time: new Date()
       });
       $('#messageInput').val('');
     };
@@ -35,6 +37,11 @@ $('#messageButton').on('click', function(e) {
 // Add a callback that is triggered for each chat message.
 messagesRef.on('child_added', function(snapshot) {
     var message = snapshot.val();
-    $('<div/>').text(message.text).appendTo($('#messagesDiv'));
+    var wrapper = $('<div class="message-wrapper them" />');
+    wrapper.appendTo($('#messagesDiv'));
+    $('<div class="circle-wrapper" />').appendTo(wrapper);
+    $('<div class="text-wrapper" />').text(message.text).appendTo(wrapper);
+    $('<div class="col-md-3 col-md-offset-2 status" style="margin-top: -10px;"/>').text(message.time).appendTo($('#messagesDiv'));
+
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
 });
