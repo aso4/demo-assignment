@@ -39,7 +39,9 @@ messagesRef.on('child_added', function(snapshot) {
     var message = snapshot.val();
     var wrapper = $('<div class="message-wrapper them" />');
     wrapper.appendTo($('#messagesDiv'));
-    $('<div class="circle-wrapper" />').appendTo(wrapper);
+    var circle_wrapper = $('<div class="circle-wrapper" />');
+    circle_wrapper.appendTo(wrapper);
+    $('<img src="/images/tammyree_edited.jpg" />').appendTo(circle_wrapper);
     $('<div class="text-wrapper" />').text(message.text).appendTo(wrapper);
     $('<div class="col-md-3 col-md-offset-2 status" style="margin-top: -10px;"/>').text(message.time).appendTo($('#messagesDiv'));
 

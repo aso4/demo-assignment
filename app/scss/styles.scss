@@ -465,8 +465,17 @@ span#message {
   border-radius: 50%;
   margin-top: 3px;
   float: left;
-  background: url('/images/tammyree_edited.jpg');
+  //background: url('/images/tammyree_edited.jpg');
 }
+
+.message-wrapper .circle-wrapper img {
+  height: 42.66667px;
+  width: 42.66667px;
+  border-radius: 50%;
+  margin-top: -3px;
+  float: left;
+}
+
 .message-wrapper .text-wrapper {
   padding: 10.66667px;
   min-height: 42.66667px;
