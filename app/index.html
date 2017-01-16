@@ -247,9 +247,14 @@
                <div class="input-group">
                 <div class="col-md-12">
                  <div class="inner-addon right-addon">
-                  <a href="#" class="glyphicon glyphicon-paperclip" style="margin-top: 10px; font-size: 2em; color: gray"></a>
+                  <a href="#" class="glyphicon glyphicon-paperclip" style="font-size: 2em; color: gray;"></a>
                   <input type='text' id='messageInput' placeholder='Enter message...'>
                  </div>
+                 <a href="#" class="glyphicon glyphicon-paperclip" style="margin-top: 10px; font-size: 2em; color: gray; z-index: 1"></a>
+                 <form action="/" method="post" name="upload">
+                   <input type="file" name="file" />
+                   <button type="submit" name="submit">Upload</button>
+                 </form>                 
                 </div>
                 <div class="input-group-btn">
                  <button id="messageButton" type="button" class="btn btn-primary btn-lg btn-block blue-bg" style="border-radius: 20px; width: 100px; z-index: 0">Add</button>
@@ -360,6 +365,7 @@
 
  <script src="/js/messages.js"></script>
  <script src="/js/modals.js"></script>
+ <script src="/js/fileupload.js"></script>
 
 </body>
 
